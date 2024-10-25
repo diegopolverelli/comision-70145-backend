@@ -4,7 +4,7 @@ const ulCursos=document.querySelector("#cursos")
 socket.on("nuevoCurso", datosCurso=>{
 
     let liCurso=document.createElement("li")
-    liCurso.innerHTML=`${datosCurso.nombre} - horas: ${datosCurso.horas} <button onclick="agregaCurso(${datosCurso._id})">Agregar</button>`
+    liCurso.innerHTML=`${datosCurso.nombre} - horas: ${datosCurso.horas} <button onclick="agregaCurso('${datosCurso._id}')">Agregar</button>`
     // {{nombre}} - horas: {{horas}} <button>Agregar</button>
     ulCursos.append(liCurso)
 })
